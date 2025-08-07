@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($matkhau === $user['matkhau']) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['ho_ten'] = $user['ho_ten'] ?? 'Không rõ';
+                $_SESSION['email'] = $user['email'];
                 $_SESSION['vai_tro'] = $user['vaitro'];
 
                 // Chuyển hướng theo vai trò
@@ -52,13 +53,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<!-- Giao diện đăng nhập có logo -->
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <title>Đăng nhập hệ thống</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=school" />
     <style>
         body {
             background-color: #e0e0e0;
@@ -78,14 +79,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-align: center;
         }
 
-        .login-container img {
-            width: 80px;
-            margin-bottom: 20px;
-        }
-
         .login-container h2 {
             margin-bottom: 20px;
             color: #333;
+        }
+
+        .login-container span {
+            font-size: 48px; /* Kích thước biểu tượng */
+            color: #2196F3; /* Màu sắc biểu tượng */
+            margin-bottom: 20px;
         }
 
         .login-container input[type="text"],
@@ -123,9 +125,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="login-container">
-        <!-- Thay logo.png bằng đường dẫn hình logo của bạn -->
-        <img src="../logo/logo.png" alt="Logo">
-
+        <span class="material-symbols-outlined">school</span> <!-- Biểu tượng thay thế cho logo -->
+        
         <h2>Đăng nhập hệ thống</h2>
 
         <?php if (!empty($err)) echo "<div class='error'>$err</div>"; ?>
