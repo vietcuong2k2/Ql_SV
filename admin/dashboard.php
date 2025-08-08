@@ -45,12 +45,12 @@ $total_mon = $row_mon['total'];
 <body class="bg-[#f7f9fc] min-h-screen text-[#1e293b]">
    <header class="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200">
     <div class="flex items-center space-x-6">
-        <a href="#">
+        <a href="dashboard.php" class="text-blue-600 font-bold text-lg select-none">
             <span class="material-symbols-outlined text-blue-600 font-extrabold text-3xl">school</span>
         </a>
         <nav class="hidden sm:flex space-x-6 text-sm text-[#475569] font-normal">
-            <a href="#" class="text-black font-normal">Trang chủ</a>
-            <a href="#" class="hover:text-black">Quản lý sinh viên</a>
+            <li><a class="hover:text-gray-900" href="dashboard.php">Trang chủ</a></li>
+            <a href="student_manage.php" class="hover:text-black">Quản lý sinh viên</a>
             <a href="#" class="hover:text-black">Quản lý lớp học</a>
             <a href="#" class="hover:text-black">Môn học</a>
             <a href="#" class="hover:text-black">Quản lý điểm</a>
