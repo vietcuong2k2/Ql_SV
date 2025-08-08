@@ -42,13 +42,13 @@ $total_mon = $row_mon['total'];
 <body class="bg-[#f7f9fc] min-h-screen text-[#1e293b]">
    <header class="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200">
         <div class="flex items-center space-x-6">
-            <a href="#">
+            <a href="dashboard.php" class="text-blue-600 font-bold text-lg select-none">
                 <span class="material-symbols-outlined text-blue-600 font-extrabold text-3xl">school</span>
             </a>
             <nav class="hidden sm:flex space-x-6 text-sm text-[#475569] font-normal">
-                <a href="#" class="text-black font-normal">Trang chủ</a>
-                <a href="sinhvien/view_sv.php" class="hover:text-black">Quản lý sinh viên</a>
-                <a href="../class-management/index.php" class="hover:text-black">Quản lý lớp học</a> <!-- Đã thay đổi đường dẫn -->
+                <li><a class="hover:text-gray-900" href="dashboard.php">Trang chủ</a></li>
+                <a href="student_manage.php" class="hover:text-black">Quản lý sinh viên</a>
+                <a href="#" class="hover:text-black">Quản lý lớp học</a>
                 <a href="#" class="hover:text-black">Môn học</a>
                 <a href="#" class="hover:text-black">Quản lý điểm</a>
                 <a href="#" class="hover:text-black">Báo cáo</a>
@@ -59,7 +59,7 @@ $total_mon = $row_mon['total'];
                 <i class="fas fa-bell"></i>
             </button>
             <div class="relative" x-data="{ open: false }">
-                <button id="userMenuButton" aria-haspopup="true" aria-expanded="false" class="hover:text-black focus:outline-none" onclick="toggleUserMenu()">
+                <button id="userMenuButton" aria-haspopup="true" aria-expanded="false" onclick="toggleUserMenu()">
                     <i class="fas fa-user-circle"></i>
                 </button>
                 <div id="userMenu" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 text-sm text-gray-700 z-10">
