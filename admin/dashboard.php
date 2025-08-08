@@ -38,24 +38,21 @@ $total_mon = $row_mon['total'];
             font-family: 'Inter', sans-serif;
         }
     </style>
-    <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=school" />
-</head>
 </head>
 <body class="bg-[#f7f9fc] min-h-screen text-[#1e293b]">
    <header class="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200">
-    <div class="flex items-center space-x-6">
-        <a href="#">
-            <span class="material-symbols-outlined text-blue-600 font-extrabold text-3xl">school</span>
-        </a>
-        <nav class="hidden sm:flex space-x-6 text-sm text-[#475569] font-normal">
-            <a href="#" class="text-black font-normal">Trang chủ</a>
-            <a href="#" class="hover:text-black">Quản lý sinh viên</a>
-            <a href="#" class="hover:text-black">Quản lý lớp học</a>
-            <a href="#" class="hover:text-black">Môn học</a>
-            <a href="#" class="hover:text-black">Quản lý điểm</a>
-            <a href="#" class="hover:text-black">Báo cáo</a>
-        </nav>
+        <div class="flex items-center space-x-6">
+            <a href="#">
+                <span class="material-symbols-outlined text-blue-600 font-extrabold text-3xl">school</span>
+            </a>
+            <nav class="hidden sm:flex space-x-6 text-sm text-[#475569] font-normal">
+                <a href="#" class="text-black font-normal">Trang chủ</a>
+                <a href="sinhvien/view_sv.php" class="hover:text-black">Quản lý sinh viên</a>
+                <a href="../class-management/index.php" class="hover:text-black">Quản lý lớp học</a> <!-- Đã thay đổi đường dẫn -->
+                <a href="#" class="hover:text-black">Môn học</a>
+                <a href="#" class="hover:text-black">Quản lý điểm</a>
+                <a href="#" class="hover:text-black">Báo cáo</a>
+            </nav>
         </div>
         <div class="flex items-center space-x-6 text-gray-500 text-lg relative">
             <button aria-label="Thông báo" class="hover:text-black focus:outline-none">
@@ -67,13 +64,11 @@ $total_mon = $row_mon['total'];
                 </button>
                 <div id="userMenu" class="hidden absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 text-sm text-gray-700 z-10">
                     <div class="flex items-center space-x-3 px-4 py-3 border-b border-gray-200">
-                       <div class="flex items-center space-x-3 px-4 py-3 border-b border-gray-200">
-    <div>
-        <div class="text-black font-semibold text-sm"><?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Admin'; ?></div>
-        <div class="text-xs leading-4"><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></div>
-        <a href="#" class="text-xs text-blue-600 hover:underline">Quản Trị Viên</a>
-    </div>
-</div>
+                       <div>
+                           <div class="text-black font-semibold text-sm"><?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Admin'; ?></div>
+                           <div class="text-xs leading-4"><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?></div>
+                           <a href="#" class="text-xs text-blue-600 hover:underline">Quản Trị Viên</a>
+                       </div>
                     </div>
                     <ul class="py-2">
                         <li>
